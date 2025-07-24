@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cerebellum Learning Hub</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --blue: #007BFF;
+      --light-blue: #e6f2ff;
+      --dark-blue: #003366;
+      --gray: #f8f9fa;
+      --white: #ffffff;
+      --text-color: #333;
+      --footer-bg: #e0e0e0;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --blue: #3399FF;
+        --light-blue: #004080;
+        --dark-blue: #001933;
+        --gray: #121212;
+        --white: #1e1e1e;
+        --text-color: #ddd;
+        --footer-bg: #222;
+      }
+
+      body {
+        background-color: var(--gray);
+        color: var(--text-color);
+      }
+
+      header {
+        background: linear-gradient(135deg, var(--blue), var(--dark-blue));
+        color: var(--white);
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.7);
+      }
+
+      .card {
+        background-color: var(--white);
+        color: var(--dark-blue);
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.7);
+      }
+
+      .card:hover {
+        background-color: var(--light-blue);
+        box-shadow: 0 12px 24px rgba(0, 0, 0, 0.9);
+      }
+
+      footer {
+        background: var(--footer-bg);
+        color: var(--text-color);
+      }
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: var(--gray);
+      color: var(--text-color);
+    }
+
+    header {
+      background: linear-gradient(135deg, var(--blue), var(--dark-blue));
+      color: var(--white);
+      text-align: center;
+      padding: 2.5rem 1rem 2rem;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    }
+
+    header img {
+      width: 70px;
+      margin-bottom: 1rem;
+      animation: bounceIn 0.8s ease forwards;
+      transform-origin: center;
+    }
+
+    @keyframes bounceIn {
+      0% { transform: scale(0.5); opacity: 0; }
+      60% { transform: scale(1.2); opacity: 1; }
+      100% { transform: scale(1); }
+    }
+
+    header h1 {
+      font-size: 2.8rem;
+      font-weight: 800;
+    }
+
+    header p {
+      margin-top: 0.5rem;
+      font-size: 1.1rem;
+      font-weight: 400;
+    }
+
+    main {
+      max-width: 1200px;
+      margin: 3rem auto;
+      padding: 0 2rem;
+    }
+
+    section {
+      margin-bottom: 4rem;
+    }
+
+    .video iframe {
+      width: 100%;
+      height: 420px;
+      border: none;
+      border-radius: 14px;
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.08);
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.8rem;
+    }
+
+    .card {
+      background-color: var(--white);
+      padding: 1.5rem;
+      border-left: 6px solid var(--blue);
+      border-radius: 12px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+      transition: all 0.3s ease;
+      text-decoration: none;
+      color: var(--dark-blue);
+      font-weight: 600;
+      font-size: 1rem;
+    }
+
+    .card:hover {
+      background-color: var(--light-blue);
+      transform: translateY(-5px);
+      box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+    }
+
+    footer {
+      text-align: center;
+      font-size: 0.95rem;
+      background: var(--footer-bg);
+      padding: 1rem;
+      margin-top: 4rem;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="assets/logo.png" alt="College Logo">
+    <h1>Cerebellum Learning Hub</h1>
+    <p>High-Quality Educational Platform for Anatomy, Physiology & Clinical Integration</p>
+    <p>Presented by <strong>Rishi Shivhare</strong>, Roll No. 96, KMSK GMC Chandrapur</p>
+  </header>
+
+  <main>
+    <section class="video">
+      <h2> Cerebellum Explained</h2>
+      <iframe src="https://www.youtube.com/embed/IdDKz1opCD8" title="Cerebellum Physiology" allowfullscreen></iframe>
+      <div style="text-align: center; margin-top: 2rem;">
+        <a href="assets/guyton(cerebellum).pdf" download style="
+          background-color: var(--blue);
+          color: white;
+          padding: 0.8rem 1.6rem;
+          font-weight: 600;
+          font-size: 1rem;
+          border-radius: 8px;
+          text-decoration: none;
+          box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+          transition: background 0.3s ease;
+        " onmouseover="this.style.backgroundColor='#0056b3'" onmouseout="this.style.backgroundColor='var(--blue)'">
+           Download Reference: Guyton (Cerebellum)
+        </a>
+      </div>
+    </section>
+
+    <section class="notes" style="margin-top: 2rem;">
+      <h2 style="text-align: center; margin-bottom: 1rem;"> Cerebellum – Complete Understanding & Notes</h2>
+
+      <details style="margin-bottom: 1rem; background: var(--white); border-left: 6px solid var(--blue); padding: 1rem; border-radius: 8px;">
+        <summary style="font-weight: 700; font-size: 1.2rem; cursor: pointer;"> Overview & Structural Organization</summary>
+        <p style="margin-top: 0.5rem;">
+          The cerebellum, derived from the metencephalon, is a critical structure of the hindbrain that contributes to the coordination of movement, maintenance of posture and balance, and fine-tuning of motor commands. Despite accounting for only ~10% of the brain's volume, it contains over 50% of its neurons. It comprises the cerebellar cortex, underlying white matter, and deep cerebellar nuclei.
+          <br /><br />
+          The cortex is organized into three sagittal zones: the medial vermis, the intermediate/paravermal zone, and the lateral hemispheres. Functionally, it can be divided into three phylogenetic lobes: the archicerebellum (flocculonodular), paleocerebellum (anterior lobe), and neocerebellum (posterior lobe).
+        </p>
+      </details>
+
+      <details style="margin-bottom: 1rem; background: var(--white); border-left: 6px solid var(--blue); padding: 1rem; border-radius: 8px;">
+        <summary style="font-weight: 700; font-size: 1.2rem; cursor: pointer;"> Histological Architecture</summary>
+        <p style="margin-top: 0.5rem;">
+          The cerebellar cortex is arranged in three distinct layers:
+          <ul style="margin-top: 0.5rem; padding-left: 1.2rem;">
+            <li><strong>Molecular Layer:</strong> Contains basket and stellate inhibitory interneurons and extensive dendritic arborization of Purkinje cells, along with parallel fibers from granule cells.</li>
+            <li><strong>Purkinje Cell Layer:</strong> A single layer of large flask-shaped inhibitory neurons, the sole output of the cortex to deep cerebellar nuclei.</li>
+            <li><strong>Granular Layer:</strong> Houses granule cells (the most numerous excitatory neurons in the brain), Golgi cells, and receives input from mossy fibers.</li>
+          </ul>
+          Two main afferent fiber types enter the cerebellum:
+          <ul style="margin-top: 0.5rem; padding-left: 1.2rem;">
+            <li><strong>Mossy fibers:</strong> Originate from spinal cord, vestibular nuclei, and pontine nuclei; synapse on granule cells.</li>
+            <li><strong>Climbing fibers:</strong> Arise exclusively from the inferior olivary nucleus; form powerful excitatory synapses directly on Purkinje cells.</li>
+          </ul>
+          <div style="margin-top: 1rem; text-align: center;">
+            <img src="assets/histo.jpg" alt="Histological Slide" style="width: 200px; height: 200px; border-radius: 50%; object-fit: cover; border: 3px solid var(--blue); box-shadow: 0 4px 12px rgba(0,0,0,0.1);" />
+            <p style="margin-top: 0.5rem; font-style: italic; color: var(--text-color);">Histological section of cerebellar cortex</p>
+          </div>
+        </p>
+      </details>
+
+      <details style="margin-bottom: 1rem; background: var(--white); border-left: 6px solid var(--blue); padding: 1rem; border-radius: 8px;">
+        <summary style="font-weight: 700; font-size: 1.2rem; cursor: pointer;"> Cerebellar Circuitry & Connections</summary>
+        <p style="margin-top: 0.5rem;">
+          <strong>Afferent Pathways:</strong><br />
+          - Corticopontocerebellar (via middle cerebellar peduncle)<br />
+          - Spinocerebellar tracts: dorsal (Clark’s column) and ventral (spinal border cells)<br />
+          - Vestibulocerebellar (from vestibular nuclei to flocculonodular lobe)<br />
+          - Olivocerebellar (climbing fibers from inferior olive)<br />
+          - Reticulocerebellar (from reticular formation)
+          <br /><br />
+          <strong>Intrinsic Circuitry:</strong><br />
+          Mossy fibers → Granule cells → Parallel fibers → Purkinje cells<br />
+          Climbing fibers → Purkinje cells<br />
+          Inhibitory interneurons (basket, stellate, Golgi) modulate local excitation.
+          <br /><br />
+          <strong>Efferent Pathways:</strong><br />
+          Purkinje cells → Deep nuclei (Fastigial, Interposed, Dentate) → Output via:
+          <ul style="padding-left: 1.2rem;">
+            <li>Fastigial → vestibular nuclei & reticular formation → axial muscles</li>
+            <li>Interposed → red nucleus (rubrospinal tract)</li>
+            <li>Dentate → VL nucleus of thalamus → motor cortex</li>
+          </ul>
+        </p>
+      </details>
+
+      <details style="margin-bottom: 1rem; background: var(--white); border-left: 6px solid var(--blue); padding: 1rem; border-radius: 8px;">
+        <summary style="font-weight: 700; font-size: 1.2rem; cursor: pointer;"> Physiological Roles</summary>
+        <p style="margin-top: 0.5rem;">
+          The cerebellum does not initiate movement but modulates it. It functions as a comparator, integrating planned movement (from cortex) and actual feedback (from periphery) to correct errors in real-time.
+          <ul style="margin-top: 0.5rem; padding-left: 1.2rem;">
+            <li><strong>Timing & Precision:</strong> Critical for temporal coordination of motor sequences.</li>
+            <li><strong>Motor Learning:</strong> Adjusts output via long-term depression at parallel-Purkinje synapses; basis of skill acquisition.</li>
+            <li><strong>Balance/Posture:</strong> Maintains equilibrium through vestibulocerebellar loops.</li>
+            <li><strong>Cognitive & Affective:</strong> Connections to prefrontal and limbic areas suggest roles in attention, language, working memory, and emotion.</li>
+          </ul>
+        </p>
+      </details>
+
+      <details style="margin-bottom: 1rem; background: var(--white); border-left: 6px solid var(--blue); padding: 1rem; border-radius: 8px;">
+        <summary style="font-weight: 700; font-size: 1.2rem; cursor: pointer;"> Clinical Correlation</summary>
+        <ul style="margin-top: 0.5rem; padding-left: 1.2rem;">
+          <li><strong>Ataxia:</strong> Uncoordinated voluntary movement (limb or trunk-based depending on lesion site).</li>
+          <li><strong>Dysdiadochokinesia:</strong> Inability to perform rapid alternating movements.</li>
+          <li><strong>Dysmetria:</strong> Past-pointing or overshooting during movement.</li>
+          <li><strong>Intention Tremor:</strong> Tremor that worsens as limb approaches target.</li>
+          <li><strong>Hypotonia:</strong> Decreased resistance to passive movement.</li>
+          <li><strong>Nystagmus:</strong> Rhythmic oscillation of the eyes, especially in vestibulocerebellar lesions.</li>
+          <li><strong>Speech Disturbances:</strong> Scanning/slurred speech (dysarthria).</li>
+        </ul>
+        <p style="margin-top: 0.8rem;">
+          Lesion localization is possible:<br />
+          - <strong>Midline/vermal:</strong> Truncal ataxia, gait disturbance<br />
+          - <strong>Intermediate:</strong> Limb ataxia, dysmetria<br />
+          - <strong>Lateral:</strong> Planning deficits, motor learning<br />
+          - <strong>Flocculonodular:</strong> Balance, nystagmus
+        </p>
+      </details>
+    </section>
+    <section class="tables" style="margin-top: 3rem;">
+      <h2 style="text-align: center; margin-bottom: 1.5rem;"> Thematic Summary Tables</h2>
+
+      <div style="overflow-x: auto; margin-bottom: 2rem;">
+        <h3 style="margin-bottom: 0.5rem; color: var(--blue);"> Physiological Functions of the Cerebellum</h3>
+        <table style="width: 100%; border-collapse: collapse; background: var(--white); border-radius: 8px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.05);">
+          <thead style="background: var(--blue); color: white;">
+            <tr>
+              <th style="padding: 0.8rem; text-align: left;">Function</th>
+              <th style="padding: 0.8rem; text-align: left;">Description</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td style="padding: 0.8rem;">Motor Coordination</td>
+              <td style="padding: 0.8rem;">Synchronizes muscle contractions to ensure smooth, accurate, and purposeful movements.</td>
+            </tr>
+            <tr>
+              <td style="padding: 0.8rem;">Posture & Balance</td>
+              <td style="padding: 0.8rem;">Utilizes vestibular and proprioceptive input to maintain equilibrium and body orientation.</td>
+            </tr>
+            <tr>
+              <td style="padding: 0.8rem;">Muscle Tone Regulation</td>
+              <td style="padding: 0.8rem;">Modulates spinal motor neuron excitability via reticulospinal and vestibulospinal pathways.</td>
+            </tr>
+            <tr>
+              <td style="padding: 0.8rem;">Motor Learning</td>
+              <td style="padding: 0.8rem;">Adjusts motor output using feedback, essential for skilled activities and adaptive motion.</td>
+            </tr>
+            <tr>
+              <td style="padding: 0.8rem;">Cognitive & Affective Modulation</td>
+              <td style="padding: 0.8rem;">Engages in higher-order processing related to attention, language, and emotion regulation.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div style="margin: 2rem 0;">
+        <h3 style="margin-bottom: 1rem; color: var(--blue); text-align: center;"> Cerebellar Connections (Visual Flowchart)</h3>
+        <div style="display: flex; flex-direction: column; align-items: center; font-size: 0.95rem; gap: 1.5rem;">
+
+          <div style="background: var(--white); border: 2px solid var(--blue); border-radius: 8px; padding: 0.5rem 1rem;">Cerebral Cortex<br>(Motor & Somatosensory)</div>
+          <div>↓ Corticopontine Fibers</div>
+          <div style="background: var(--white); border: 2px solid var(--blue); border-radius: 8px; padding: 0.5rem 1rem;">Pontine Nuclei</div>
+          <div>↓ Pontocerebellar Tract (via Middle Cerebellar Peduncle)</div>
+          <div style="background: var(--white); border: 2px solid var(--blue); border-radius: 8px; padding: 0.5rem 1rem;">Cerebrocerebellum<br>(Lateral Hemisphere)</div>
+
+          <div style="display: flex; justify-content: center; flex-wrap: wrap; gap: 2rem; margin-top: 2rem;">
+            <div style="text-align: center;">
+              <div style="background: var(--white); border: 2px solid var(--blue); border-radius: 8px; padding: 0.5rem 1rem;">Spinal Cord<br>(Proprioception)</div>
+              <div>↓ Spinocerebellar Tracts</div>
+              <div style="background: var(--white); border: 2px solid var(--blue); border-radius: 8px; padding: 0.5rem 1rem;">Spinocerebellum<br>(Vermis & Intermediate)</div>
+            </div>
+
+            <div style="text-align: center;">
+              <div style="background: var(--white); border: 2px solid var(--blue); border-radius: 8px; padding: 0.5rem 1rem;">Vestibular Nuclei</div>
+              <div>↓ Vestibulocerebellar Tract</div>
+              <div style="background: var(--white); border: 2px solid var(--blue); border-radius: 8px; padding: 0.5rem 1rem;">Vestibulocerebellum<br>(Flocculonodular Lobe)</div>
+            </div>
+
+            <div style="text-align: center;">
+              <div style="background: var(--white); border: 2px solid var(--blue); border-radius: 8px; padding: 0.5rem 1rem;">Inferior Olive</div>
+              <div>↓ Olivocerebellar Tract</div>
+              <div style="background: var(--white); border: 2px solid var(--blue); border-radius: 8px; padding: 0.5rem 1rem;">Purkinje Cells</div>
+            </div>
+          </div>
+
+          <div style="margin-top: 2rem;">Purkinje Cell output → Deep Cerebellar Nuclei</div>
+
+          <div style="display: flex; justify-content: center; flex-wrap: wrap; gap: 2rem;">
+            <div style="text-align: center;">
+              <div style="background: var(--white); border: 2px solid var(--blue); border-radius: 8px; padding: 0.5rem 1rem;">Fastigial Nucleus</div>
+              <div>↓ Vestibulo/Reticulospinal Tracts</div>
+              <div style="background: var(--white); border: 2px solid var(--blue); border-radius: 8px; padding: 0.5rem 1rem;">Brainstem<br>(Vestibular, Reticular)</div>
+            </div>
+
+            <div style="text-align: center;">
+              <div style="background: var(--white); border: 2px solid var(--blue); border-radius: 8px; padding: 0.5rem 1rem;">Interposed Nuclei</div>
+              <div>↓ Rubrospinal Tract</div>
+              <div style="background: var(--white); border: 2px solid var(--blue); border-radius: 8px; padding: 0.5rem 1rem;">Red Nucleus</div>
+            </div>
+
+            <div style="text-align: center;">
+              <div style="background: var(--white); border: 2px solid var(--blue); border-radius: 8px; padding: 0.5rem 1rem;">Dentate Nucleus</div>
+              <div>↓ Dentatothalamic Tract</div>
+              <div style="background: var(--white); border: 2px solid var(--blue); border-radius: 8px; padding: 0.5rem 1rem;">Thalamus (VL) → Motor Cortex</div>
+            </div>
+          </div>
+
+          <div style="margin-top: 2rem; text-align: center;">
+            Final Output: Cerebellum influences movement via Brainstem & Motor Cortex.
+          </div>
+        </div>
+      </div>
+
+      <div style="overflow-x: auto;">
+        <h3 style="margin-bottom: 0.5rem; color: var(--blue);"> Lesion Sites and Their Clinical Manifestations</h3>
+        <table style="width: 100%; border-collapse: collapse; background: var(--white); border-radius: 8px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.05);">
+          <thead style="background: var(--blue); color: white;">
+            <tr>
+              <th style="padding: 0.8rem; text-align: left;">Lesion Site</th>
+              <th style="padding: 0.8rem; text-align: left;">Clinical Signs & Symptoms</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td style="padding: 0.8rem;">Vermis (Midline)</td>
+              <td style="padding: 0.8rem;">Truncal ataxia, broad-based gait, difficulty standing without support.</td>
+            </tr>
+            <tr>
+              <td style="padding: 0.8rem;">Intermediate Zone</td>
+              <td style="padding: 0.8rem;">Limb ataxia, dysdiadochokinesia, intention tremor.</td>
+            </tr>
+            <tr>
+              <td style="padding: 0.8rem;">Lateral Hemisphere</td>
+              <td style="padding: 0.8rem;">Motor planning deficits, impaired motor learning, delayed initiation.</td>
+            </tr>
+            <tr>
+              <td style="padding: 0.8rem;">Flocculonodular Lobe</td>
+              <td style="padding: 0.8rem;">Vertigo, nystagmus, imbalance, falls to affected side.</td>
+            </tr>
+            <tr>
+              <td style="padding: 0.8rem;">Bilateral Lesions</td>
+              <td style="padding: 0.8rem;">Symmetric ataxia, scanning speech, gait instability, common in toxic/metabolic causes.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    &copy; 2025 KMSK GMC Chandrapur. Built with passion by Rishi Shivhare and team.
+  </footer>
+</body>
+</html>
