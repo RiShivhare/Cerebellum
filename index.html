@@ -8,6 +8,33 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
   <style>
+    .download-btn {
+      display: inline-block;
+      margin-top: 1rem;
+      background-color: var(--blue);
+      color: white;
+      padding: 0.6rem 1.2rem;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: 600;
+    }
+    .download-btn:hover {
+      background-color: #0056b3;
+    }
+    .back-to-top {
+      position: fixed;
+      bottom: 1rem;
+      right: 1rem;
+      background: var(--blue);
+      color: white;
+      padding: 0.6rem 0.9rem;
+      font-size: 1.5rem;
+      text-align: center;
+      text-decoration: none;
+      border-radius: 50%;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+      z-index: 999;
+    }
     :root {
       --blue: #007BFF;
       --light-blue: #e6f2ff;
@@ -214,11 +241,19 @@
   </style>
 </head>
 <body>
-  <header>
+  <header id="top">
     <h1>Cerebellum Learning Hub</h1>
     <p>High-Quality Educational Platform for Anatomy, Physiology & Clinical Integration</p>
     <p>Presented by <strong>Rishi Shivhare</strong>, Roll No. 96, KMSK GMC Chandrapur</p>
   </header>
+
+  <nav style="position:sticky;top:0;background:var(--white);z-index:1000;padding:0.8rem;text-align:center;">
+    <a href="#anatomy">Anatomy</a>
+    <a href="#functions">Functions</a>
+    <a href="#clinical">Clinical</a>
+    <a href="#tables">Tables</a>
+    <a href="#top">⬆ Back to Top</a>
+  </nav>
 
   <main>
     <section class="video">
@@ -244,95 +279,103 @@
     <section class="notes" style="margin-top: 2rem;">
       <h2 style="text-align: center; margin-bottom: 1rem;"> Cerebellum – Complete Understanding & Notes</h2>
 
-      <details style="margin-bottom: 1rem; background: var(--white); border-left: 6px solid var(--blue); padding: 1rem; border-radius: 8px;">
-        <summary style="font-weight: 700; font-size: 1.2rem; cursor: pointer;"> Overview & Structural Organization</summary>
-        <p style="margin-top: 0.5rem;">
-          The cerebellum, derived from the metencephalon, is a critical structure of the hindbrain that contributes to the coordination of movement, maintenance of posture and balance, and fine-tuning of motor commands. Despite accounting for only ~10% of the brain's volume, it contains over 50% of its neurons. It comprises the cerebellar cortex, underlying white matter, and deep cerebellar nuclei.
-          <br /><br />
-          The cortex is organized into three sagittal zones: the medial vermis, the intermediate/paravermal zone, and the lateral hemispheres. Functionally, it can be divided into three phylogenetic lobes: the archicerebellum (flocculonodular), paleocerebellum (anterior lobe), and neocerebellum (posterior lobe).
-        </p>
-      </details>
+      <section id="anatomy">
+        <h3 style="color:var(--blue);margin-bottom:0.8rem;">Anatomy & Structure</h3>
+        <details style="margin-bottom: 1rem; background: var(--white); border-left: 6px solid var(--blue); padding: 1rem; border-radius: 8px;">
+          <summary title="Overview & Structural Organization" style="font-weight: 700; font-size: 1.2rem; cursor: pointer;"> Overview & Structural Organization</summary>
+          <p style="margin-top: 0.5rem;">
+            The cerebellum, derived from the metencephalon, is a critical structure of the hindbrain that contributes to the coordination of movement, maintenance of posture and balance, and fine-tuning of motor commands. Despite accounting for only ~10% of the brain's volume, it contains over 50% of its neurons. It comprises the cerebellar cortex, underlying white matter, and deep cerebellar nuclei.
+            <br /><br />
+            The cortex is organized into three sagittal zones: the medial vermis, the intermediate/paravermal zone, and the lateral hemispheres. Functionally, it can be divided into three phylogenetic lobes: the archicerebellum (flocculonodular), paleocerebellum (anterior lobe), and neocerebellum (posterior lobe).
+          </p>
+        </details>
+        <details style="margin-bottom: 1rem; background: var(--white); border-left: 6px solid var(--blue); padding: 1rem; border-radius: 8px;">
+          <summary title="Histological Architecture" style="font-weight: 700; font-size: 1.2rem; cursor: pointer;"> Histological Architecture</summary>
+          <p style="margin-top: 0.5rem;">
+            The cerebellar cortex is arranged in three distinct layers:
+            <ul style="margin-top: 0.5rem; padding-left: 1.2rem;">
+              <li><strong>Molecular Layer:</strong> Contains basket and stellate inhibitory interneurons and extensive dendritic arborization of Purkinje cells, along with parallel fibers from granule cells.</li>
+              <li><strong>Purkinje Cell Layer:</strong> A single layer of large flask-shaped inhibitory neurons, the sole output of the cortex to deep cerebellar nuclei.</li>
+              <li><strong>Granular Layer:</strong> Houses granule cells (the most numerous excitatory neurons in the brain), Golgi cells, and receives input from mossy fibers.</li>
+            </ul>
+            Two main afferent fiber types enter the cerebellum:
+            <ul style="margin-top: 0.5rem; padding-left: 1.2rem;">
+              <li><strong>Mossy fibers:</strong> Originate from spinal cord, vestibular nuclei, and pontine nuclei; synapse on granule cells.</li>
+              <li><strong>Climbing fibers:</strong> Arise exclusively from the inferior olivary nucleus; form powerful excitatory synapses directly on Purkinje cells.</li>
+            </ul>
+            <div style="margin-top: 1rem; text-align: center;">
+              <img src="histo.jpg" alt="Histological Slide" style="width: 200px; height: 200px; border-radius: 50%; object-fit: cover; border: 3px solid var(--blue); box-shadow: 0 4px 12px rgba(0,0,0,0.1);" />
+              <p style="margin-top: 0.5rem; font-style: italic; color: var(--text-color);">Histological section of cerebellar cortex</p>
+              <a href="histo.jpg" download="histology.jpg" class="download-btn">Download Histology Image</a>
+            </div>
+          </p>
+        </details>
+        <details style="margin-bottom: 1rem; background: var(--white); border-left: 6px solid var(--blue); padding: 1rem; border-radius: 8px;">
+          <summary title="Cerebellar Circuitry & Connections" style="font-weight: 700; font-size: 1.2rem; cursor: pointer;"> Cerebellar Circuitry & Connections</summary>
+          <p style="margin-top: 0.5rem;">
+            <strong>Afferent Pathways:</strong><br />
+            - Corticopontocerebellar (via middle cerebellar peduncle)<br />
+            - Spinocerebellar tracts: dorsal (Clark’s column) and ventral (spinal border cells)<br />
+            - Vestibulocerebellar (from vestibular nuclei to flocculonodular lobe)<br />
+            - Olivocerebellar (climbing fibers from inferior olive)<br />
+            - Reticulocerebellar (from reticular formation)
+            <br /><br />
+            <strong>Intrinsic Circuitry:</strong><br />
+            Mossy fibers → Granule cells → Parallel fibers → Purkinje cells<br />
+            Climbing fibers → Purkinje cells<br />
+            Inhibitory interneurons (basket, stellate, Golgi) modulate local excitation.
+            <br /><br />
+            <strong>Efferent Pathways:</strong><br />
+            Purkinje cells → Deep nuclei (Fastigial, Interposed, Dentate) → Output via:
+            <ul style="padding-left: 1.2rem;">
+              <li>Fastigial → vestibular nuclei & reticular formation → axial muscles</li>
+              <li>Interposed → red nucleus (rubrospinal tract)</li>
+              <li>Dentate → VL nucleus of thalamus → motor cortex</li>
+            </ul>
+          </p>
+        </details>
+      </section>
 
-      <details style="margin-bottom: 1rem; background: var(--white); border-left: 6px solid var(--blue); padding: 1rem; border-radius: 8px;">
-        <summary style="font-weight: 700; font-size: 1.2rem; cursor: pointer;"> Histological Architecture</summary>
-        <p style="margin-top: 0.5rem;">
-          The cerebellar cortex is arranged in three distinct layers:
+      <section id="functions">
+        <h3 style="color:var(--blue);margin-bottom:0.8rem;">Functions & Physiology</h3>
+        <details style="margin-bottom: 1rem; background: var(--white); border-left: 6px solid var(--blue); padding: 1rem; border-radius: 8px;">
+          <summary title="Physiological Roles" style="font-weight: 700; font-size: 1.2rem; cursor: pointer;"> Physiological Roles</summary>
+          <p style="margin-top: 0.5rem;">
+            The cerebellum does not initiate movement but modulates it. It functions as a comparator, integrating planned movement (from cortex) and actual feedback (from periphery) to correct errors in real-time.
+            <ul style="margin-top: 0.5rem; padding-left: 1.2rem;">
+              <li><strong>Timing & Precision:</strong> Critical for temporal coordination of motor sequences.</li>
+              <li><strong>Motor Learning:</strong> Adjusts output via long-term depression at parallel-Purkinje synapses; basis of skill acquisition.</li>
+              <li><strong>Balance/Posture:</strong> Maintains equilibrium through vestibulocerebellar loops.</li>
+              <li><strong>Cognitive & Affective:</strong> Connections to prefrontal and limbic areas suggest roles in attention, language, working memory, and emotion.</li>
+            </ul>
+          </p>
+        </details>
+      </section>
+
+      <section id="clinical">
+        <h3 style="color:var(--blue);margin-bottom:0.8rem;">Clinical Correlation</h3>
+        <details style="margin-bottom: 1rem; background: var(--white); border-left: 6px solid var(--blue); padding: 1rem; border-radius: 8px;">
+          <summary title="Clinical Correlation" style="font-weight: 700; font-size: 1.2rem; cursor: pointer;"> Clinical Correlation</summary>
           <ul style="margin-top: 0.5rem; padding-left: 1.2rem;">
-            <li><strong>Molecular Layer:</strong> Contains basket and stellate inhibitory interneurons and extensive dendritic arborization of Purkinje cells, along with parallel fibers from granule cells.</li>
-            <li><strong>Purkinje Cell Layer:</strong> A single layer of large flask-shaped inhibitory neurons, the sole output of the cortex to deep cerebellar nuclei.</li>
-            <li><strong>Granular Layer:</strong> Houses granule cells (the most numerous excitatory neurons in the brain), Golgi cells, and receives input from mossy fibers.</li>
+            <li><strong>Ataxia:</strong> Uncoordinated voluntary movement (limb or trunk-based depending on lesion site).</li>
+            <li><strong>Dysdiadochokinesia:</strong> Inability to perform rapid alternating movements.</li>
+            <li><strong>Dysmetria:</strong> Past-pointing or overshooting during movement.</li>
+            <li><strong>Intention Tremor:</strong> Tremor that worsens as limb approaches target.</li>
+            <li><strong>Hypotonia:</strong> Decreased resistance to passive movement.</li>
+            <li><strong>Nystagmus:</strong> Rhythmic oscillation of the eyes, especially in vestibulocerebellar lesions.</li>
+            <li><strong>Speech Disturbances:</strong> Scanning/slurred speech (dysarthria).</li>
           </ul>
-          Two main afferent fiber types enter the cerebellum:
-          <ul style="margin-top: 0.5rem; padding-left: 1.2rem;">
-            <li><strong>Mossy fibers:</strong> Originate from spinal cord, vestibular nuclei, and pontine nuclei; synapse on granule cells.</li>
-            <li><strong>Climbing fibers:</strong> Arise exclusively from the inferior olivary nucleus; form powerful excitatory synapses directly on Purkinje cells.</li>
-          </ul>
-          <div style="margin-top: 1rem; text-align: center;">
-            <img src="histo.jpg" alt="Histological Slide" style="width: 200px; height: 200px; border-radius: 50%; object-fit: cover; border: 3px solid var(--blue); box-shadow: 0 4px 12px rgba(0,0,0,0.1);" />
-            <p style="margin-top: 0.5rem; font-style: italic; color: var(--text-color);">Histological section of cerebellar cortex</p>
-          </div>
-        </p>
-      </details>
-
-      <details style="margin-bottom: 1rem; background: var(--white); border-left: 6px solid var(--blue); padding: 1rem; border-radius: 8px;">
-        <summary style="font-weight: 700; font-size: 1.2rem; cursor: pointer;"> Cerebellar Circuitry & Connections</summary>
-        <p style="margin-top: 0.5rem;">
-          <strong>Afferent Pathways:</strong><br />
-          - Corticopontocerebellar (via middle cerebellar peduncle)<br />
-          - Spinocerebellar tracts: dorsal (Clark’s column) and ventral (spinal border cells)<br />
-          - Vestibulocerebellar (from vestibular nuclei to flocculonodular lobe)<br />
-          - Olivocerebellar (climbing fibers from inferior olive)<br />
-          - Reticulocerebellar (from reticular formation)
-          <br /><br />
-          <strong>Intrinsic Circuitry:</strong><br />
-          Mossy fibers → Granule cells → Parallel fibers → Purkinje cells<br />
-          Climbing fibers → Purkinje cells<br />
-          Inhibitory interneurons (basket, stellate, Golgi) modulate local excitation.
-          <br /><br />
-          <strong>Efferent Pathways:</strong><br />
-          Purkinje cells → Deep nuclei (Fastigial, Interposed, Dentate) → Output via:
-          <ul style="padding-left: 1.2rem;">
-            <li>Fastigial → vestibular nuclei & reticular formation → axial muscles</li>
-            <li>Interposed → red nucleus (rubrospinal tract)</li>
-            <li>Dentate → VL nucleus of thalamus → motor cortex</li>
-          </ul>
-        </p>
-      </details>
-
-      <details style="margin-bottom: 1rem; background: var(--white); border-left: 6px solid var(--blue); padding: 1rem; border-radius: 8px;">
-        <summary style="font-weight: 700; font-size: 1.2rem; cursor: pointer;"> Physiological Roles</summary>
-        <p style="margin-top: 0.5rem;">
-          The cerebellum does not initiate movement but modulates it. It functions as a comparator, integrating planned movement (from cortex) and actual feedback (from periphery) to correct errors in real-time.
-          <ul style="margin-top: 0.5rem; padding-left: 1.2rem;">
-            <li><strong>Timing & Precision:</strong> Critical for temporal coordination of motor sequences.</li>
-            <li><strong>Motor Learning:</strong> Adjusts output via long-term depression at parallel-Purkinje synapses; basis of skill acquisition.</li>
-            <li><strong>Balance/Posture:</strong> Maintains equilibrium through vestibulocerebellar loops.</li>
-            <li><strong>Cognitive & Affective:</strong> Connections to prefrontal and limbic areas suggest roles in attention, language, working memory, and emotion.</li>
-          </ul>
-        </p>
-      </details>
-
-      <details style="margin-bottom: 1rem; background: var(--white); border-left: 6px solid var(--blue); padding: 1rem; border-radius: 8px;">
-        <summary style="font-weight: 700; font-size: 1.2rem; cursor: pointer;"> Clinical Correlation</summary>
-        <ul style="margin-top: 0.5rem; padding-left: 1.2rem;">
-          <li><strong>Ataxia:</strong> Uncoordinated voluntary movement (limb or trunk-based depending on lesion site).</li>
-          <li><strong>Dysdiadochokinesia:</strong> Inability to perform rapid alternating movements.</li>
-          <li><strong>Dysmetria:</strong> Past-pointing or overshooting during movement.</li>
-          <li><strong>Intention Tremor:</strong> Tremor that worsens as limb approaches target.</li>
-          <li><strong>Hypotonia:</strong> Decreased resistance to passive movement.</li>
-          <li><strong>Nystagmus:</strong> Rhythmic oscillation of the eyes, especially in vestibulocerebellar lesions.</li>
-          <li><strong>Speech Disturbances:</strong> Scanning/slurred speech (dysarthria).</li>
-        </ul>
-        <p style="margin-top: 0.8rem;">
-          Lesion localization is possible:<br />
-          - <strong>Midline/vermal:</strong> Truncal ataxia, gait disturbance<br />
-          - <strong>Intermediate:</strong> Limb ataxia, dysmetria<br />
-          - <strong>Lateral:</strong> Planning deficits, motor learning<br />
-          - <strong>Flocculonodular:</strong> Balance, nystagmus
-        </p>
-      </details>
+          <p style="margin-top: 0.8rem;">
+            Lesion localization is possible:<br />
+            - <strong>Midline/vermal:</strong> Truncal ataxia, gait disturbance<br />
+            - <strong>Intermediate:</strong> Limb ataxia, dysmetria<br />
+            - <strong>Lateral:</strong> Planning deficits, motor learning<br />
+            - <strong>Flocculonodular:</strong> Balance, nystagmus
+          </p>
+        </details>
+      </section>
     </section>
-    <section class="tables" style="margin-top: 3rem;">
+    <section class="tables" id="tables" style="margin-top: 3rem;">
       <h2 style="text-align: center; margin-bottom: 1.5rem;"> Thematic Summary Tables</h2>
 
       <div style="overflow-x: auto; margin-bottom: 2rem;">
@@ -424,6 +467,7 @@
           <div style="margin-top: 2rem; text-align: center;">
             Final Output: Cerebellum influences movement via Brainstem & Motor Cortex.
           </div>
+          <a href="flowchart.jpg" download="cerebellar-flowchart.jpg" class="download-btn">Download Flowchart</a>
         </div>
       </div>
 
@@ -466,5 +510,6 @@
   <footer>
     &copy; 2025 KMSK GMC Chandrapur. Built with passion by Rishi Shivhare and team.
   </footer>
+  <a href="#top" class="back-to-top">↑</a>
 </body>
 </html>
